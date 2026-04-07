@@ -72,7 +72,7 @@ setappdata(fig, 'playBtn', playBtn);
 setappdata(fig, 'stopBtn', stopBtn);
 
 %% 2. Subplot Setup & Geometry
-box_L = 0.45; box_W = 0.33; box_H = 0.25; 
+box_L = 0.42; box_W = 0.336; box_H = 0.27; 
 ax_len = 0.4; % Length of the body-fixed axis lines
 v_base = [ box_L/2,  box_W/2, -box_H/2; -box_L/2,  box_W/2, -box_H/2; -box_L/2, -box_W/2, -box_H/2; box_L/2, -box_W/2, -box_H/2;
            box_L/2,  box_W/2,  box_H/2; -box_L/2,  box_W/2,  box_H/2; -box_L/2, -box_W/2,  box_H/2; box_L/2, -box_W/2,  box_H/2];
@@ -89,7 +89,7 @@ daspect([1 1 1]);
 
 if is_static
     plot3([x(1), x_ref(1)], [y(1), y_ref(1)], [z(1), z_ref(1)], 'k--', 'LineWidth', 1.5);
-    plot3(x_ref(1), y_ref(1), z_ref(1), 'kp', 'MarkerSize', 12, 'MarkerFaceColor', 'y', 'LineWidth', 1.5);
+    plot3(x_ref(1), y_ref(1), z_ref(1), 'kx', 'MarkerSize', 10, 'LineWidth', 2);
 else
     plot3(x_ref, y_ref, z_ref, 'k--', 'LineWidth', 1.5); % Background Reference Path
 end
@@ -112,7 +112,7 @@ daspect([1 1 1]);
 
 if is_static
     plot([x(1), x_ref(1)], [y(1), y_ref(1)], 'k--', 'LineWidth', 1.5);
-    plot(x_ref(1), y_ref(1), 'kp', 'MarkerSize', 12, 'MarkerFaceColor', 'y', 'LineWidth', 1.5);
+    plot(x_ref(1), y_ref(1), 'kx', 'MarkerSize', 10, 'LineWidth', 2);
 else
     plot(x_ref, y_ref, 'k--', 'LineWidth', 1.5); % Background Reference Path
 end
@@ -136,7 +136,7 @@ daspect([1 1 1]);
 
 if is_static
     plot([x(1), x_ref(1)], [z(1), z_ref(1)], 'k--', 'LineWidth', 1.5);
-    plot(x_ref(1), z_ref(1), 'kp', 'MarkerSize', 12, 'MarkerFaceColor', 'y', 'LineWidth', 1.5);
+    plot(x_ref(1), z_ref(1), 'kx', 'MarkerSize', 10, 'LineWidth', 2);
 else
     plot(x_ref, z_ref, 'k--', 'LineWidth', 1.5); % Background Reference Path
 end
@@ -160,7 +160,7 @@ daspect([1 1 1]);
 
 if is_static
     plot([y(1), y_ref(1)], [z(1), z_ref(1)], 'k--', 'LineWidth', 1.5);
-    plot(y_ref(1), z_ref(1), 'kp', 'MarkerSize', 12, 'MarkerFaceColor', 'y', 'LineWidth', 1.5);
+    plot(y_ref(1), z_ref(1), 'kx', 'MarkerSize', 10, 'LineWidth', 2);
 else
     plot(y_ref, z_ref, 'k--', 'LineWidth', 1.5); % Background Reference Path
 end
